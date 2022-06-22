@@ -37,5 +37,6 @@ public class TreeTest {
     second.insert(10);
 
     System.out.println(tree.equals(second));
+    System.out.println(tree.isBinarySearchTree());
   }
 }
