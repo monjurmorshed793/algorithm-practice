@@ -22,5 +22,8 @@ public class TreeTest {
     System.out.println("Height of the tree");
     System.out.println(tree.height());
     System.out.println("End of height of the tree");
+
+    System.out.println("Min value");
+    System.out.println(tree.min());
   }
 }
