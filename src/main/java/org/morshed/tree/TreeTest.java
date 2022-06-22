@@ -38,5 +38,7 @@ public class TreeTest {
 
     System.out.println(tree.equals(second));
     System.out.println(tree.isBinarySearchTree());
+
+    tree.printNodesAtDistance(2);
   }
 }
