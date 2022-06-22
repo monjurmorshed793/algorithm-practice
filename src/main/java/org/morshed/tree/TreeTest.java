@@ -18,5 +18,9 @@ public class TreeTest {
     tree.traverseInOrder();
     System.out.println("--------");
     tree.traversePostOrder();
+
+    System.out.println("Height of the tree");
+    System.out.println(tree.height());
+    System.out.println("End of height of the tree");
   }
 }
