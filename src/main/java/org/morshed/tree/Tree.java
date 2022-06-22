@@ -123,6 +123,8 @@ public class Tree {
     }
 
     public boolean equals(Tree other){
+      if(other == null)
+        return false;
       return equals(root, other.root);
     }
 
