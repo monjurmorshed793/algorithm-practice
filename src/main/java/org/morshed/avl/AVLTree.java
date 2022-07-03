@@ -32,7 +32,14 @@ public class AVLTree {
     else
       root.rightChild = insert(root.rightChild, value);
 
+
     root.height = Math.max(height(root.leftChild), height(root.rightChild))+1;
+
+    var balanceFactor= height(root.leftChild) - height(root.rightChild);
+    if(balanceFactor>1)
+      System.out.println(root.value+" is left heavy");
+    else if(balanceFactor<-1)
+      System.out.println(root.value+" is right heavy");
     return root;
   }
 
