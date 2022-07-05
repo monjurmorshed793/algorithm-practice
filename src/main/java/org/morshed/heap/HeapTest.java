@@ -6,6 +6,12 @@ public class HeapTest {
     heap.insert(10);
     heap.insert(5);
     heap.insert(17);
+    heap.insert(4);
+    heap.insert(22);
+
+    heap.remove();
+
+    heap.insert(23);
 
     System.out.println(heap);
   }

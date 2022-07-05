@@ -11,12 +11,19 @@ public class Heap {
     bubbleUp();
   }
 
-  public void remove(){
+  public int remove(){
     if(isEmpty())
       throw new IllegalStateException();
+    var root = items[0];
     items[0] = items[--size];
+    bubbleDown();
+
+    return root;
+  }
+
+  private void bubbleDown(){
     var index = 0;
-    while(index<=size &&  isValidParent(index)){
+    while(index<=size &&  !isValidParent(index)){
       var largetChildIndex = largerChildIndex(index);
       swap(index, largetChildIndex);
       index = largetChildIndex;
@@ -59,11 +66,11 @@ public class Heap {
   }
 
   private int leftChild(int index){
-    return leftChildIndex(index);
+    return items[leftChildIndex(index)];
   }
 
   private int rightChild(int index){
-    return rightChildIndex(index);
+    return items[rightChildIndex(index)];
   }
 
   private int leftChildIndex(int index){
