@@ -5,6 +5,9 @@ public class TrieTest {
     var trie = new Trie();
     trie.insert("cat");
     trie.insert("can");
-    System.out.println("DONE");
+    System.out.println(trie.contains("can"));
+    trie.insert("canada");
+    System.out.println(trie.contains("canada"));
+
   }
 }
