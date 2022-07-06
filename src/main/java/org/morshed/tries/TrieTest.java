@@ -9,8 +9,9 @@ public class TrieTest {
     trie.insert("canada");
     System.out.println(trie.contains("canada"));
 
-    trie.traverse();
-    System.out.println("----------");
-    trie.traversePostOrder();
+    trie.remove("can");
+
+    System.out.println(trie.contains("can"));
+
   }
 }

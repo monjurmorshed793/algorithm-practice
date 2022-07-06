@@ -33,6 +33,14 @@ public class Trie {
     public Node[] getChildren(){
       return children.values().toArray(new Node[0]);
     }
+
+    public boolean hasChildren(){
+      return !children.isEmpty();
+    }
+
+    public void removeChild(char ch){
+      children.remove(ch);
+    }
   }
 
   private Node root = new Node(' ');
@@ -80,5 +88,30 @@ public class Trie {
       traversePostOrder(child);
     }
     System.out.println(root.value);
+  }
+
+  public void remove(String word){
+    remove(root, word, 0);
+  }
+
+  private void remove(Node root, String word, int index){
+    if(index == word.length()){
+      root.isEndOfWord = false;
+      return;
+    }
+
+    var ch = word.charAt(index);
+    var child = root.getChild(ch);
+
+    if(child==null)
+      return;
+
+
+    remove(child, word, index+1);
+    System.out.println(root.value);
+
+    if(!child.hasChildren() && !child.isEndOfWord){
+      child.removeChild(ch);
+    }
   }
 }
