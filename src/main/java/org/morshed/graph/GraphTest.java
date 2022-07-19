@@ -8,7 +8,8 @@ public class GraphTest {
     graph.addNode("C");
     graph.addEdge("A", "B");
     graph.addEdge("A", "C");
-    graph .removeEdge("A", "C");
+    graph.removeNode("A");
+    graph.addEdge("B", "C");
     graph.print();
   }
 }
