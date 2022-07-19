@@ -11,5 +11,19 @@ public class GraphTest {
     graph.removeNode("A");
     graph.addEdge("B", "C");
     graph.print();
+
+    System.out.println("Traversal");
+
+
+    graph = new Graph();
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+    graph.addNode("D");
+    graph.addEdge("A", "B");
+    graph.addEdge("B", "D");
+    graph.addEdge("D", "C");
+    graph.addEdge("A", "C");
+    graph.traverseDepthFirst("A");
   }
 }
