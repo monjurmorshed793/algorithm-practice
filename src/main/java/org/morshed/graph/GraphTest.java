@@ -24,6 +24,30 @@ public class GraphTest {
     graph.addEdge("B", "D");
     graph.addEdge("D", "C");
     graph.addEdge("A", "C");
+    System.out.println("Recursive");
+    graph.traverseDepthFirstRec("A");
+    System.out.println("Iterative");
+    graph = new Graph();
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+    graph.addNode("D");
+    graph.addEdge("A", "B");
+    graph.addEdge("B", "D");
+    graph.addEdge("D", "C");
+    graph.addEdge("A", "C");
     graph.traverseDepthFirst("A");
+
+    System.out.println("BFS");
+    graph = new Graph();
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+    graph.addNode("D");
+    graph.addEdge("A", "B");
+    graph.addEdge("B", "D");
+    graph.addEdge("D", "C");
+    graph.addEdge("A", "C");
+    graph.traverseBreadthFirst("A");
   }
 }
